@@ -6,14 +6,13 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Hi, I am Balakumaran an AI Research Engineer by profession, Aersopace Engineer by educational background based in India. 
+
 # Balakumaran Murugesan
 
 **AI Innovator | Full-stack Developer | Lifelong Learner**
 
 ---
-
-Welcome to my personal website! I’m Balakumaran Murugesan, an AI Research Engineer with over 3 years of experience in deep learning, computer vision, and NLP applications. My expertise spans machine learning algorithms, model building, and data manipulation, and I have a strong background in Aerospace Engineering, which helps me solve complex problems with a unique, technical approach.
+Welcome to my personal website! I’m Balakumaran Murugesan,  AI Research Engineer by profession, Aersopace Engineer by educational background based in India. I have with over 3 years of experience in deep learning, computer vision, and NLP applications. My expertise spans machine learning algorithms, model building, and data manipulation, and I have a strong background in Aerospace Engineering, which helps me solve complex problems with a unique, technical approach.
 
 ### What I Do:
 - **AI & Machine Learning**: Building deep learning models for computer vision and NLP applications.
