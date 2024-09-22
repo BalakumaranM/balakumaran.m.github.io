@@ -88,17 +88,25 @@ width: 36px;
 }
 
 img {
-  width: 150px; /* Adjust this value as needed */
-  height: 200px; /* Set a fixed height for rectangle */
-  border-radius: 10px; /* Slight rounding for a softer look */
+  width: 100%; /* Ensure the image takes the full width of its container */
+  max-width: 150px; /* Set the max width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Soft corners */
   object-fit: cover; /* Ensures the image fills the rectangle nicely */
-  
+
   @include breakpoint($large) {
     padding: 5px;
     border: 1px solid $border-color;
   }
 }
 }
+
+@media (max-width: 600px) {
+.author__avatar img {
+  max-width: 100px; /* Adjust the size for smaller screens */
+}
+}
+  
   
 
 .author__content {
