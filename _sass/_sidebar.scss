@@ -77,28 +77,29 @@
    ========================================================================== */
 
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 36px;
-  // set width only, for non-square avatars
-  // height: 36px;
+display: table-cell;
+vertical-align: top;
+width: 36px;
 
+@include breakpoint($large) {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+img {
+  width: 150px; /* Adjust this value as needed */
+  height: 100px; /* Set a fixed height for rectangle */
+  border-radius: 10px; /* Slight rounding for a softer look */
+  object-fit: cover; /* Ensures the image fills the rectangle nicely */
+  
   @include breakpoint($large) {
-    display: block;
-    width: auto;
-    height: auto;
-  }
-
-  img {
-    max-width: 175px;
-    border-radius: 50%;
-
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-    }
+    padding: 5px;
+    border: 1px solid $border-color;
   }
 }
+}
+  
 
 .author__content {
   display: table-cell;
