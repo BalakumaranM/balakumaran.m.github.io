@@ -1,7 +1,88 @@
 ---
-title: "Portfolio item number 2"
-excerpt: "Short description of portfolio item number 2 <br/><img src='/images/500x300.png'>"
+title: "Stacking Sequence Optimization of a Laminated Composite C-Section Using Neural Networks"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/mtp portfolio1.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio: M.Tech Project</title>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <h1>Stacking Sequence Optimization of a Laminated Composite C-Section Using Neural Networks</h1>
+
+    <h2>Overview</h2>
+    <p>This project focuses on optimizing the stacking sequence of a laminated composite C-section using <strong>Multi-Criteria Decision Making (MCDM)</strong> and <strong>Neural Networks</strong>. The project involved detailed <em>structural analysis</em> of the composite C-section to predict failure indices, buckling load multipliers, and deformation values. Classical Laminate Theory (CLT) and Finite Element Analysis (FEA) were employed for the initial analysis, followed by Machine Learning and Deep Neural Networks (DNN) to streamline the design process.</p>
+
+    <h2>Structural Analysis</h2>
+    <h3>Initial Design</h3>
+    <p>The C-section was subjected to axial and shear loading, and its structural response was evaluated using <strong>Classical Laminate Theory</strong>. The laminate was composed of 16 plies with orientations such as \( \pm45^\circ, 0^\circ, 90^\circ \), and the analysis aimed at minimizing the <em>failure index</em> while ensuring structural integrity under various loading conditions.</p>
+
+    <ul>
+        <li><strong>Material:</strong> Hexply M21/T800S carbon-epoxy prepreg</li>
+        <li><strong>Mechanical properties:</strong> Longitudinal modulus \(E_1 = 1.72 \times 10^5 \, \text{MPa}\), Transverse modulus \(E_2 = 10,000 \, \text{MPa}\)</li>
+        <li><strong>Geometric properties:</strong> The laminate was 4 mm thick with a ply thickness of 0.25 mm.</li>
+    </ul>
+
+    <h3>Results from Classical Laminate Theory</h3>
+    <p>The failure index for the initial stacking sequence was calculated based on <em>Tsai-Hill failure criteria</em>. The first ply failure occurred in shear at the highest load:</p>
+
+    <ul>
+        <li><strong>Initial stacking sequence:</strong> \( \pm45^\circ/0^\circ/\pm45^\circ/90^\circ/\pm45^\circ \)</li>
+        <li><strong>Failure Index (shear):</strong> 0.6505</li>
+    </ul>
+
+    <p>Using the <em>Generalized Reduced Gradient (GRG)</em> method, the stacking sequence was optimized to reduce the failure index and meet design constraints for factors such as buckling load and deformation.</p>
+
+    <h2>AI and Machine Learning Implementation</h2>
+    <p>The major innovation in this project was using <strong>machine learning</strong> to predict structural responses for different stacking sequences. Instead of running time-consuming FEA simulations for every configuration, a <strong>Deep Neural Network (DNN)</strong> was trained to predict important structural responses, including <em>Total Deformation</em>, <em>Maximum Principal Stress</em>, and the <em>Failure Index</em>.</p>
+
+    <h3>Data Preparation</h3>
+    <p>Data was generated for 70 different stacking sequences using FEA for various loading cases (axial, shear, bending). Input data consisted of stacking sequences and their corresponding structural responses such as stress, strain, and deformation values. The data was split into training and test sets, and normalization was applied to ensure stable training.</p>
+
+    <h3>Neural Network Architecture</h3>
+    <ul>
+        <li><strong>Input layer:</strong> Representing stacking sequences and load conditions.</li>
+        <li><strong>Hidden layers:</strong> Three fully connected layers to capture nonlinear relationships.</li>
+        <li><strong>Output layer:</strong> Predicting <em>AHP scores</em>, <em>failure indices</em>, and <em>deformation values</em>.</li>
+    </ul>
+
+    <h3>Training and Results</h3>
+    <p>The neural network was trained using backpropagation with a mean squared error loss function. It successfully predicted structural responses with an accuracy of 95% within 1.46 seconds, drastically reducing the computation time compared to full FEA simulations.</p>
+
+    <p><strong>Key Findings:</strong></p>
+    <ul>
+        <li>The neural network effectively predicted failure indices for untested stacking sequences, providing a quick and efficient way to evaluate designs.</li>
+        <li>The model was fine-tuned to predict results under different weightings of design criteria (e.g., prioritizing deformation over failure index).</li>
+    </ul>
+
+    <p>For more details, visit my <a href="https://github.com/BalakumaranM/Stress-prediction-using-ann-">GitHub repository</a>.</p>
+
+    <h2>Mathematical Equations</h2>
+    <p>For failure index calculations, we use Tsai-Hill failure criteria:</p>
+    <p>Failure occurs when:</p>
+    <div>
+      $$ f = \left( \frac{\sigma_1}{X} \right)^2 + \left( \frac{\sigma_2}{Y} \right)^2 + \left( \frac{\tau_{12}}{S} \right)^2 - \frac{\sigma_1 \sigma_2}{X^2} \geq 1 $$
+    </div>
+
+    <p>For buckling load calculations, the formula used is:</p>
+    <div>
+      $$ \lambda_{cr} = \frac{\text{Eigenvalue}}{[\mathbf{K} + \lambda_{cr} \mathbf{K_{\sigma}}] \cdot \mathbf{\delta u}} = 0 $$
+    </div>
+
+    <h2>Conclusion</h2>
+    <p>This project demonstrated the power of combining <strong>Classical Laminate Theory</strong> with <strong>Deep Learning</strong> for composite structure optimization. By leveraging AI, we significantly accelerated the analysis and prediction process for structural behavior, allowing for quicker design iterations.</p>
+
+    <p>In future work, the use of <strong>Physics-Informed Neural Networks (PINNs)</strong> could further improve prediction accuracy by integrating physical laws directly into the machine learning model.</p>
+
+    <p>Explore more detailed analysis in my <a href="M.Tech_Thesis.pdf">thesis</a>, and view the source code in my <a href="https://github.com/BalakumaranM/Stress-prediction-using-ann-">GitHub repository</a>.</p>
+</body>
+</html>
