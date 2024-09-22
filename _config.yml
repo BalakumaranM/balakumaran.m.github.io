@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "About Me"
 title_separator          : "-"
 name                     : &name "Balakumaran"
-description              : &description "I am "
+description              : &description "I am an AI Research Engineer"
 url                      : https://balakumaranm.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "BalakumaranM/balakumaranm.github.io"
@@ -21,7 +21,7 @@ repository               : "BalakumaranM/balakumaranm.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "bala.jpg"
+  avatar           : "bala.png"
   name             : "Balakumaran"
   pronouns         : # example: "she/her"  
   bio              : "AI Research Engineer | Aerospace Engineer"
